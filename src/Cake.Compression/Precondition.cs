@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace Cake.Compression
 {
@@ -42,6 +43,28 @@ namespace Cake.Compression
 		}
 
 		/// <summary>
+		/// Checks whether the specified collection is not <strong>null</strong> or an empty
+		/// collection.
+		/// </summary>
+		/// <param name="col">The collection to test.</param>
+		/// <param name="paramName">The name of the parameter that caused the exception.</param>
+		/// <exception cref="ArgumentNullException"><em>col</em> is
+		/// <strong>null</strong>.</exception>
+		/// <exception cref="ArgumentException"><em>col</em> is <strong>empty</strong>.</exception>
+		public static void IsNotNullOrEmpty(ICollection col, string paramName)
+		{
+			if (col == null)
+			{
+				throw new ArgumentNullException(paramName);
+			}
+			else if (col.Count == 0)
+			{
+				string message = "The collection cannot be empty.";
+				throw new ArgumentException(message, paramName);
+			}
+		}
+
+		/// <summary>
 		/// Checks whether the specified string is not <strong>null</strong> or an empty string.
 		/// </summary>
 		/// <param name="str">The string to test.</param>
@@ -57,7 +80,7 @@ namespace Cake.Compression
 			}
 			else if (string.IsNullOrEmpty(str))
 			{
-				string message = "The parameter cannot be empty.";
+				string message = "The string cannot be empty.";
 				throw new ArgumentException(message, paramName);
 			}
 		}

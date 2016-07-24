@@ -55,11 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Bzip2.cs" />
-    <Compile Include="Classes\GZip.cs" />
-    <Compile Include="Classes\Zip.cs" />
+    <Compile Include="ArchiveCompressSettings.cs" />
+    <Compile Include="ArchiveFormat.cs" />
+    <Compile Include="ArchiveUncompressSettings.cs" />
     <Compile Include="CompressionAliases.cs" />
-    <Compile Include="Classes\CompressionBase.cs" />
     <Compile Include="Precondition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

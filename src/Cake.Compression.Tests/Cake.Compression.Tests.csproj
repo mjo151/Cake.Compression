@@ -67,9 +67,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Classes\BZip2Tests.cs" />
-    <Compile Include="Classes\GZipTests.cs" />
-    <Compile Include="Classes\ZipTest.cs" />
+    <Compile Include="CompressionAliasesTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
